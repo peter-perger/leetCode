@@ -9,8 +9,6 @@ The remaining elements of nums are not important as well as the size of nums.
 Return k.
 """
 
-
-
 class Solution(object):
     def removeElement(self, nums, val):
         nums[:] = sorted(set(nums))
