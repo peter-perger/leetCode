@@ -1,12 +1,14 @@
 class Solution(object):
     def strStr(self, haystack, needle):
         for i in range(len(haystack) - len(needle) + 1):
-                if haystack[i:i+len(needle)] == needle:
-                    return i
+            word = haystack[i:i+len(needle)]
+            
+            if word == needle:
+                return i
+
         return -1
 
-
-haystack = "estup"
+haystack = "estoptup"
 needle = "tup"
 
 solution = Solution()
