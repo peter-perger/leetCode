@@ -15,9 +15,8 @@ class Solution():
             ']': '[',
             '}': '{'
         }
-
+      
         stack = []
-
 
         for char in s:
             if char in mapping.values():
@@ -34,5 +33,5 @@ class Solution():
 
 solution = Solution()
 print(solution.validParentheses("()"))
-# print(solution.validParentheses("([]{})"))
-# print(solution.validParentheses("([)])"))
+print(solution.validParentheses("([]{})"))
+print(solution.validParentheses("([)])"))
