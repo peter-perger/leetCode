@@ -7,23 +7,25 @@ class Solution:
         return num_str == num_str[::-1]
     
     def isPalindrome2(self, x):
-        if x < 0:
-            return False
+        num_str = str(x)
+
+        left = 0
+        right = len(num_str) - 1
+
+        while left <= right:
+            if (num_str[left]) != (num_str[right]):
+                return False
+            
+            left += 1
+            right -= 1
         
-        rev = 0 
-        num = x
-
-        while num != 0:
-            rev = rev * 10 + num % 10
-            num = num // 10
-
-        return rev == x
-    
+        return True
 
 num = 143341
-num2 = 1232544
+num2 = 12325444452321
+num3 = 56876783
 
 solution = Solution()
-print(solution.isPalindrome(num))
-print(solution.isPalindrome2(num2))
+#print(solution.isPalindrome(num2))
+print(solution.isPalindrome2(num))
         

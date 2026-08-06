@@ -26,22 +26,26 @@ Given a roman numeral, convert it to an integer.
 
 class Solution:
     def romanToInt(self, s):
-        dict = {"I": 1, 
-                "V": 5, 
-                "X": 10, 
-                "L": 50, 
-                "C": 100, 
-                "D": 500, 
-                "M": 1000}
-        
+        dict = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+
+
         result = 0
-        
+
         for i in range(len(s)):
             current = dict[s[i]]
             next = dict[s[i + 1]] if i + 1 < len(s) else 0
-            
+
             if current < next:
                 result -= current
+
             else:
                 result += current
 

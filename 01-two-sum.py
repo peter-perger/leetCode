@@ -5,19 +5,20 @@ You can return the answer in any order.
 """
 
 nums = [1, 5, 6, 2, 4, 3]
-target = 11
+target = 8
 
 class Solution:
     def twoSum(self, nums, target):
         num_map = {}
 
         for i, num in enumerate(nums):
-            complement = target - num
-            
-            if complement in num_map:
-                return [num_map[complement], i]
-            
+            complementer = target - num
+
+            if complementer in num_map:
+                return(num_map[complementer], i)
+
             num_map[num] = i
+
 
 
 solution = Solution()

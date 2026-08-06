@@ -7,27 +7,42 @@ class Solution:
     def longestCommonPrefix(self, strs):
         if not strs:
             return ""
-        
+
         prefix = strs[0]
 
         for string in strs[1:]:
             while string.find(prefix) != 0:
                 prefix = prefix[:-1]
 
-                if not prefix:
-                    return ""
-        
+            if not prefix:
+                return ""
+
         return prefix
 
+            
 
-
-strs0 = ["flower","flow","flight"]
-strs2 = ["dog","racecar","car"]
-strs3 = ["a"]
-strs4 = ["ab", "a"]
+words = [
+    "precaution",
+    "precede",
+    "precise",
+    "preclude",
+    "predict",
+    "preface",
+    "prefer",
+    "prefix",
+    "prehistoric",
+    "prejudge",
+    "prelude",
+    "premise",
+    "premium",
+    "prepare",
+    "preposition",
+    "preschool",
+    "prescribe",
+    "present",
+    "preserve",
+    "presume",
+]
 
 solution = Solution()
-print(solution.longestCommonPrefix(strs0))
-# print(solution.longestCommonPrefix(strs2))
-# print(solution.longestCommonPrefix(strs3))
-print(solution.longestCommonPrefix(strs4))
+print(solution.longestCommonPrefix(words))
