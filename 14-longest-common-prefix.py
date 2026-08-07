@@ -5,17 +5,17 @@ If there is no common prefix, return an empty string "".
 
 class Solution:
     def longestCommonPrefix(self, strs):
-        if not strs:
+        if not str:
             return ""
 
         prefix = strs[0]
 
-        for string in strs[1:]:
-            while string.find(prefix) != 0:
+        for word in strs:
+            if word.find(prefix) != 0:
                 prefix = prefix[:-1]
 
-            if not prefix:
-                return ""
+                if not prefix:
+                    return ""
 
         return prefix
 

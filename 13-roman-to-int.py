@@ -36,7 +36,6 @@ class Solution:
             'M': 1000
         }
 
-
         result = 0
 
         for i in range(len(s)):
@@ -45,12 +44,12 @@ class Solution:
 
             if current < next:
                 result -= current
-
             else:
                 result += current
 
         return result
-    
+
+       
     def romanToInt2(self, s):
         dict = {"I": 1, "V": 5, "X": 10, "L": 50, 
                 "C": 100, "D": 500, "M": 1000}
@@ -73,6 +72,6 @@ print(solution.romanToInt("III"))
 print(solution.romanToInt("LVIII"))
 print(solution.romanToInt("MCMXCIV"))
 
-print(solution.romanToInt2("III"))
-print(solution.romanToInt2("LVIII"))
-print(solution.romanToInt2("MCMXCIV"))
+#print(solution.romanToInt2("III"))
+#print(solution.romanToInt2("LVIII"))
+#print(solution.romanToInt2("MCMXCIV"))
