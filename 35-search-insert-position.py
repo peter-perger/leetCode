@@ -8,21 +8,23 @@ class Solution:
     def searchInsert(self, nums, target):
         if target in nums:
             return nums.index(target)
-        
+
         i = 0
 
-        while i < len(nums) - 1:
-            next_num = nums[i + 1]
+        for i in range(len(nums) - 1):
+            current = nums[i]
+            next = nums[i + 1]
 
-            if target > nums[i] and target < next_num:
+            if target > current and target < next:
                 return i + 1
-            
+
             i += 1
-        
-        if target < nums[0]:
+
+        if nums[0] > target:
             return 0
-        
-        return len(nums)
+
+        if nums[-1] < target:
+            return len(nums)
 
 nums0 = [1,3,5,6]
 target0 = 5

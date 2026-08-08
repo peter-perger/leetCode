@@ -11,20 +11,14 @@ Return k.
 
 class Solution(object):
     def removeElement(self, nums, val):
-        nums[:] = sorted(set(nums))
-        
-        return len(nums)
-    
-    def removeElement2(self, nums, val):
         for i in range(nums.count(val)):
             nums.remove(val)
         
         return len(nums)
-
-
+    
 nums = [3,2,2,3] 
 val = 3
 
 solution = Solution()
 print(solution.removeElement(nums, val))
-print(solution.removeElement2(nums,val))
+#print(solution.removeElement2(nums,val))

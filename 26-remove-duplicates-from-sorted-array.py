@@ -11,38 +11,23 @@ The remaining elements beyond index k - 1 can be ignored.
 class Solution(object):
     def removeDuplicates1(self, nums):
         if not nums:
-            return 0
-        
+            return False
+
         j = 0
 
         for i in range(1, len(nums)):
-            if nums[j] != nums[i]:
+            if nums[i] != nums[i -1]:
                 j += 1
+
                 nums[j] = nums[i]
 
         return j + 1
-    
-    def removeDuplicates2(self, nums):
-        if not nums:
-            return 0
-        
-        j = 0
-
-        for i in range(1, len(nums)):
-            if nums[i] != nums[i - 1]:
-                j += 1
-                nums[j] = nums[i]
-                
-        return j + 1
-            
-
         
 
         
 nums = [0,0,1,1,1,2,2,3,3,4]
-nums = [1,1,2]
+nums2 = [1,1,2]
 
 
 solution = Solution()
 print(solution.removeDuplicates1(nums))
-print(solution.removeDuplicates2(nums))
