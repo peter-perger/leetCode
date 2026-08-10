@@ -13,10 +13,10 @@ class Solution(object):
     def removeElement(self, nums, val):
         for i in range(nums.count(val)):
             nums.remove(val)
-        
+
         return len(nums)
     
-nums = [3,2,2,3] 
+nums = [3,2, 5, 6, 7, 3, 2,3] 
 val = 3
 
 solution = Solution()

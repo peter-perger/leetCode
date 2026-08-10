@@ -5,11 +5,9 @@ A word is a maximal substring consisting of non-space characters only.
 
 class Solution():
     def lengthOfLastWord(self, s):
-            words = s.split(" ")
+           words = s.split()
+           return len(words[-1])
 
-            for word in words[::-1]:
-                  if word != "":
-                        return len(word)
 
 
 

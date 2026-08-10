@@ -12,8 +12,8 @@ class Solution():
     def validParentheses(self, s):
         mapping = {
             ')': '(',
-            '}': '{',
-            ']': '[' 
+            ']': '[',
+            '}': '{'
         }
 
         stack = []
@@ -22,11 +22,10 @@ class Solution():
             if char in mapping.values():
                 stack.append(char)
 
-            elif not stack or mapping[char] != stack.pop():
+            elif not stack or stack.pop() != mapping[char]:
                 return False
 
         return not stack
-               
 
         
         

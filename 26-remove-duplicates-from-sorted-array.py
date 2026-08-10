@@ -1,5 +1,5 @@
 """
-Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. 
+Given an integer array nums sorted in non-decreasing (ascending) order, remove the duplicates in-place such that each unique element appears only once. 
 The relative order of the elements should be kept the same.
 Consider the number of unique elements in nums to be k​​​​​​​​​​​​​​. 
 After removing duplicates, return the number of unique elements k.
@@ -16,9 +16,8 @@ class Solution(object):
         j = 0
 
         for i in range(1, len(nums)):
-            if nums[i] != nums[i -1]:
+            if nums[i - 1] != nums[i]:
                 j += 1
-
                 nums[j] = nums[i]
 
         return j + 1
@@ -30,4 +29,4 @@ nums2 = [1,1,2]
 
 
 solution = Solution()
-print(solution.removeDuplicates1(nums))
+print(solution.removeDuplicates1(nums2))
