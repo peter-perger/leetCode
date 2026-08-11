@@ -9,15 +9,15 @@ class Solution():
         for i in range(len(digits)-1, -1, -1):
             if digits[i] == 9:
                 digits[i] = 0
-
             else:
                 digits[i] = digits[i] + 1
                 return digits
 
         return [1] + digits
+        
     
 digits0 = [4,3,2,1]
-digits2 = [1,2,3]
+digits2 = [9,9,9]
 
 solution = Solution()
 #print(solution.plusOne(digits0))
