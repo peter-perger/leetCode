@@ -27,8 +27,6 @@ class Solution():
 
             else:
                 memo[n] = climb(n-1) + climb(n-2)
-                print(memo)
-                input("Press enter for next recursion ")
                 return memo[n]
 
         return climb(n)
@@ -47,5 +45,16 @@ class Solution():
 
 solution = Solution()
 #print(solution.climbStairs(15))
-print(solution.climbStairs2(5))
+print(solution.climbStairs2(4))
 #print(solution.climbStairs3(15))
+
+
+# dictio = {}
+# dictio[1] = 1
+# dictio[2] = 2
+
+# n = 55
+
+# dictio[n] = 8
+
+# print(dictio)
