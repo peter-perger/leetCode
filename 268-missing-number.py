@@ -21,18 +21,6 @@ class Solution(object):
 
 nums = [0, 1, 4, 2]
 
-# print(sum(list(range(len(nums)))))
-# print(sum(list(range(len(nums) + 1))))
-
 solution = Solution()
-#print(solution.missingNumber(nums))
-#print(solution.missingNumber2(nums))
-#print(solution.missingNumber(nums))
-
-sum(nums)       # >> 0 + 1 + 2 + 4 = 7
-
-len(nums)       # >> 4
-len(nums) + 1   # >> 5
-range(5)        # >> range(0, 4)
-sum(range(5))   # >> 0 + 1 + 2 + 3 + 4 = 10 
-
+print(solution.missingNumber(nums))
+print(solution.missingNumber2(nums))

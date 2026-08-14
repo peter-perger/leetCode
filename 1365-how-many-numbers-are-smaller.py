@@ -22,23 +22,22 @@ class Solution():
 
         return result
 
-    def smallerNumbersThanCurrent2(self, nums):
-        temp  = sorted(nums)
+    def smallerNumbersThanCurrent2(self, nums): #[8, 1, 2, 2, 3]
+        temp  = sorted(nums)                    #[1, 2, 2, 3, 8]
         dict = {}
 
         for i, num in enumerate(temp):
             if num not in dict:
-                dict[num] = i
+                dict[num] = i                   #{1:0, 2:1, 3:3, 8:4}
 
         result = []
 
         for i in nums:
-            result.append(nums[i])
+            result.append(nums[i])              # <- [0, 1, 3, 4]
 
         return result
         
- 
-nums = [8,1,2,2,3] # 1, 2, 2, 3, 8 >> {1:0, 2:1, 3:3, 8:4}
+nums = [8,1,2,2,3]
 nums2 = [6,5,4,8]
 nums3 = [7,7,7,7]
 

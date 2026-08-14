@@ -13,20 +13,17 @@ class Solution(object):
                 result.append(i)
 
         return result
-        
+
+    def findDissapearedNumbers2(self, nums):
+        set_nums = set(nums)
+        return [i for i in range(1, len(nums) + 1) if i not in set_nums]
+    
 nums = [4,3,2,7,8,2,3,1]
 nums2 = [1,1]
 nums3 = [1, 2]
 
-len(nums2)   # >> 2
-range(2)     # >> range(0, 1)
-
-
-
-
-
 solution = Solution()
-print(solution.findDissapearedNumbers(nums))
-print(solution.findDissapearedNumbers(nums2))
-print(solution.findDissapearedNumbers(nums3))
+print(solution.findDissapearedNumbers2(nums))
+print(solution.findDissapearedNumbers2(nums2))
+print(solution.findDissapearedNumbers2(nums3))
 
