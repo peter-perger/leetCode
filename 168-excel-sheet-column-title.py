@@ -12,14 +12,13 @@ AB -> 28
 """
 
 class Solution():
-    def convertToTitle(self, columNumber):
+    def convertToTitle(self, columnNumber):
         capitals = [chr(x) for x in range(ord('A'), ord('Z') + 1)]
-        print(capitals)
         result = []
 
-        while columNumber > 0:
-            result.append(capitals[(columNumber - 1) % 26])
-            columNumber = (columNumber -1) // 26
+        while columnNumber > 0:
+            result.append(capitals[(columnNumber - 1) % 26])
+            columnNumber = (columnNumber -1) // 26
 
         result.reverse()
         return ''.join(result)
